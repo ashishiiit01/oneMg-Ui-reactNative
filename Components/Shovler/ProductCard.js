@@ -19,22 +19,22 @@ const images = [
 
 const Index = ({ navigation }) => {
 
-    const tempArray = [1, 2, 3, 4, 5, 6, 7, 8]
+    const tempArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
     return (
         <ScrollView horizontal>
             <View style={{ height: 200, flexDirection: 'row', padding: 10, marginBottom: 20, }}>
                 {
-                    images.map(image => (
+                    images.map(value => (
                         <View style={{
                             height: 180, width: 180, backgroundColor: 'white', marginRight: 10, justifyContent: 'center',
                             alignItems: 'center',
                         }}>
-                            <View style={{ marginTop: 10 }}>
+                            <View style={{ marginTop: 10, }}>
                                 <Image
                                     style={{ width: 120, height: 120, borderRadius: 80 }}
                                     source={{
-                                        uri: image
+                                        uri: value
                                     }}
                                 />
                             </View>

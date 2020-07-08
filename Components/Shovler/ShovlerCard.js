@@ -8,12 +8,12 @@ import { Entypo } from '@expo/vector-icons';
 
 const Index = ({ navigation }) => {
 
-    const tempArray = [1, 2, 3, 4, 5, 6, 7, 8]
+    const tempArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
     return (
         <View style={{ height: 280, flexDirection: 'row', padding: 10, marginBottom: 10 }}>
             {
-                tempArray.map(key => (
+                tempArray.map(value => (
                     <View style={{ height: 260, width: 180, backgroundColor: 'white', padding: 10, marginRight: 10 }}>
                         <View style={{ backgroundColor: 'wheat', alignSelf: 'flex-start', flexDirection: 'row', alignItems: 'center', padding: 2 }}>
                             <AntDesign name="checkcircleo" size={14} color="black" />
@@ -45,16 +45,15 @@ const Index = ({ navigation }) => {
                         </View>
 
                         <View style={{ marginTop: 10 }}>
-                            <Text style={{ fontSize: 13, color: '#166116' }}>76% off + 20% Coupon</Text>
+                            <Text style={{ fontSize: 12, color: '#166116' }}>76% off + 20% Coupon</Text>
                         </View>
                         <View style={{ marginTop: 10, flexDirection: 'row' }}>
-                            <Text style={{ fontSize: 13, marginRight: 5, color: '#525A52' }}>MRP</Text>
-                            <Text style={{ fontSize: 13, textDecorationLine: 'line-through', color: '#525A52' }}>9500</Text>
+                            <Text style={{ fontSize: 12, marginRight: 5, color: '#525A52' }}>MRP</Text>
+                            <Text style={{ fontSize: 12, textDecorationLine: 'line-through', color: '#525A52' }}>9500</Text>
 
                         </View>
                         <View style={{ flexDirection: 'row' }}>
                             <Text style={{ fontSize: 16, fontWeight: 'bold' }}>1758</Text>
-
                         </View>
                     </View>
                 ))
