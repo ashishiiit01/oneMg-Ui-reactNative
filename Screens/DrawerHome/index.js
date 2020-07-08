@@ -1,10 +1,14 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, TouchableOpacity, SafeAreaView, ScrollView } from 'react-native';
-import Header from '../../Components/Header'
-import Ads from '../../Components/Ads'
-import Banner from '../../Components/Banner'
+import { StyleSheet, SafeAreaView, ScrollView } from 'react-native';
 
+
+import Header from '../../Components/Header'
+import Banner from '../../Components/Banner'
 import Card from '../../Components/Common/Card';
+import Shovler from '../../Components/Shovler';
+import ProductCard from '../../Components/Shovler/ProductCard';
+
+
 
 
 const Index = ({ navigation }) => {
@@ -14,11 +18,15 @@ const Index = ({ navigation }) => {
         <SafeAreaView style={styles.container} >
             <Header navigation={navigation} />
             <ScrollView>
-                {/* <Ads /> */}
                 <Banner />
                 <Card title={title} description={description} />
 
+                <Shovler />
+                <ProductCard />
+                <Shovler />
+
             </ScrollView>
+
 
         </SafeAreaView>
     );

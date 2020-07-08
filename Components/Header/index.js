@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, TouchableOpacity } from 'react-native';
+import { StyleSheet, View, } from 'react-native';
 import Top from './Top';
 import SearchBar from './SearchBar';
 import Bottom from './Bottom';
@@ -16,15 +16,11 @@ const Index = ({ navigation }) => {
 }
 
 
-
-
 export default Index;
 
 const styles = StyleSheet.create({
     container: {
-        // flex: 1,
-        // justifyContent: 'center',
-        // alignItems: 'center'
-        backgroundColor: 'grey'
+        backgroundColor: 'grey',
+        // marginBottom: 20
     },
 });

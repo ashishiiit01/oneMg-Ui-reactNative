@@ -1,6 +1,6 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, TouchableOpacity, Dimensions } from 'react-native';
-import { Ionicons, MaterialCommunityIcons, Feather, FontAwesome5, FontAwesome, Fontisto, Entypo } from "@expo/vector-icons"
+import { StyleSheet, View, Dimensions } from 'react-native';
+import { MaterialCommunityIcons, FontAwesome5, Fontisto, Entypo } from "@expo/vector-icons"
 
 const SCREEN_WIDTH = Dimensions.get('screen').width;
 const SCREEN_HEIGHT = Dimensions.get('screen').height;
@@ -90,16 +90,13 @@ export default Bottom;
 
 const styles = StyleSheet.create({
     container: {
-        // flex: 1,
         flexDirection: 'column',
         backgroundColor: 'white',
         minHeight: 50,
     },
     row1: {
         flexDirection: 'row',
-        // justifyContent: 'space-between',
         alignItems: 'center',
-        // backgroundColor: 'white',
         minHeight: 50,
         paddingHorizontal: 25,
     }, icon: {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyleSheet, View, TextInput } from 'react-native';
-import { Ionicons, MaterialCommunityIcons, Feather, FontAwesome } from "@expo/vector-icons"
+import { FontAwesome } from "@expo/vector-icons"
 
 
 const SearchBar = () => {
@@ -11,7 +11,9 @@ const SearchBar = () => {
             <TextInput
                 style={{ height: 50, borderColor: 'black', borderRadius: 5, backgroundColor: '#E4E4DF', paddingLeft: 40, }}
                 onChangeText={text => onChangeText(text)}
-                value={value}
+                placeholder={"Search medicines and health Products"}
+                placeholderTextColor="#000"
+
             />
             <FontAwesome
                 style={{ position: 'absolute', top: 10, left: 25 }}

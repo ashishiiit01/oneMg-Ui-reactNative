@@ -1,10 +1,10 @@
 import React from 'react';
-import { StyleSheet, Text, View, Button, TouchableOpacity, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, Dimensions } from 'react-native';
 
 const SCREEN_WIDTH = Dimensions.get('screen').width;
 const SCREEN_HEIGHT = Dimensions.get('screen').height;
 
-import { Ionicons, MaterialCommunityIcons, Feather, Entypo } from "@expo/vector-icons"
+import { Feather, Entypo } from "@expo/vector-icons";
 
 
 const Top = ({ navigation }) => {
@@ -20,7 +20,6 @@ const Top = ({ navigation }) => {
                     <Text
                         style={{ marginLeft: 30, fontSize: 18 }}
                         onPress={() => navigation.navigate('Location')}
-
                     >
                         Location
                 </Text>
@@ -53,7 +52,6 @@ export default Top;
 
 const styles = StyleSheet.create({
     container: {
-        // flex: 1,
         backgroundColor: 'white',
         height: 50,
         justifyContent: 'center',

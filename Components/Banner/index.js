@@ -2,7 +2,6 @@ import React from 'react';
 import { StyleSheet, Text, View, ScrollView, Image, Dimensions } from 'react-native';
 
 const SCREEN_WIDTH = Dimensions.get('screen').width;
-const SCREEN_HEIGHT = Dimensions.get('screen').height;
 
 const images = [
     "https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
@@ -11,7 +10,6 @@ const images = [
     "https://images.unsplash.com/photo-1429087969512-1e85aab2683d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80",
     "https://images.unsplash.com/photo-1505678261036-a3fcc5e884ee?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
 ];
-
 
 
 class Index extends React.Component {
@@ -46,7 +44,7 @@ class Index extends React.Component {
     }
     render() {
         return (
-            <View>
+            <View style={{ marginBottom: 20, paddingHorizontal: 10, marginTop: 20 }}>
                 <ScrollView
                     horizontal
                     pagingEnabled
@@ -81,21 +79,15 @@ export default Index;
 
 const styles = StyleSheet.create({
     container: {
-        // flex: 1,
-        // justifyContent: 'center',
-        // alignItems: 'center'
-        // backgroundColor: 'grey',
         height: 150,
         width: '100%',
-        paddingHorizontal: 10,
-        // position: 'relative'
+        // paddingHorizontal: 10,
     },
     asd: {
         height: 150,
         width: SCREEN_WIDTH - 20,
         borderRadius: 5,
         marginRight: 10
-
     },
     whiteDot: {
         height: 5,
