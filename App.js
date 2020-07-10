@@ -5,6 +5,7 @@ import {
   createDrawerNavigator,
   DrawerContentScrollView,
   DrawerItemList,
+  DrawerItem
 } from '@react-navigation/drawer';
 
 import DrawerHome from './Screens/DrawerHome';
@@ -15,7 +16,14 @@ import { createStackNavigator } from '@react-navigation/stack';
 const SCREEN_WIDTH = Dimensions.get('screen').width;
 const SCREEN_HEIGHT = Dimensions.get('screen').height;
 
-const DrawerWidth = SCREEN_WIDTH * 0.8
+const DrawerWidth = SCREEN_WIDTH * 0.8;
+
+const ReferAndEarn = () => (
+  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <Text>ReferAndEarn Screen!</Text>
+  </View>
+)
+
 
 function CustomDrawerContent({ progress, ...rest }) {
   return (
@@ -61,6 +69,66 @@ function CustomDrawerContent({ progress, ...rest }) {
         </View>
       </View>
       <DrawerItemList {...rest} />
+      <View style={{ height: 70, backgroundColor: '#EBEBE7', paddingHorizontal: 17, justifyContent: 'center' }}>
+        <Text style={{ color: 'grey' }}>Medicines</Text>
+      </View>
+
+      <DrawerItem
+        label={() => (<View style={{ flexDirection: 'row' }}>
+          <FontAwesome5 color={'black'} size={20} name={'rupee-sign'} style={{ marginRight: 10 }} />
+          <Text>Find Substitute</Text>
+        </View>)}
+
+        onPress={() => console.log("hello ")}
+
+      />
+      <DrawerItem
+        label="Order And Prescription"
+        onPress={() => console.log("hello ")}
+      />
+
+      <DrawerItem
+        label="Pill Reminder"
+        onPress={() => console.log("hello ")}
+      />
+
+      <DrawerItem
+        label="My Health Records"
+        onPress={() => console.log("hello ")}
+      />
+
+      <View style={{ height: 70, backgroundColor: '#EBEBE7', paddingHorizontal: 17, justifyContent: 'center' }}>
+        <Text style={{ color: 'grey' }}>Doctors</Text>
+      </View>
+
+      <DrawerItem
+        label="My Appointments"
+        onPress={() => console.log("hello ")}
+      />
+
+      <View style={{ height: 70, backgroundColor: '#EBEBE7', paddingHorizontal: 17, justifyContent: 'center' }}>
+        <Text style={{ color: 'grey' }}>Lab Tests</Text>
+      </View>
+
+
+      <DrawerItem
+        label="Book Lab Tests"
+        onPress={() => console.log("hello ")}
+      />
+      <View style={{ height: 70, backgroundColor: '#EBEBE7', paddingHorizontal: 17, justifyContent: 'center' }}>
+        <Text style={{ color: 'grey' }}>Article</Text>
+      </View>
+
+
+      <DrawerItem
+        label="View All"
+        onPress={() => console.log("hello ")}
+      />
+
+      <DrawerItem
+        label="Bookmarks"
+        onPress={() => console.log("hello ")}
+      />
 
     </DrawerContentScrollView>
   );
@@ -83,6 +151,8 @@ function MyDrawer() {
     >
       <Drawer.Screen name="Drawer Home" component={DrawerHome} />
       <Drawer.Screen name="Manage Payment" component={ManagePayment} />
+      <Drawer.Screen name="Refer And Earn" component={ReferAndEarn} />
+
     </Drawer.Navigator>
   );
 }

@@ -6,7 +6,7 @@ const SCREEN_WIDTH = Dimensions.get('screen').width;
 const SCREEN_HEIGHT = Dimensions.get('screen').height;
 
 const Bottom = () => {
-    const [toggle, setToggle] = React.useState(false)
+    const [toggle, setToggle] = React.useState(0)
 
 
     return (
@@ -33,12 +33,14 @@ const Bottom = () => {
                 />
                 {
                     toggle ? (
+
                         <FontAwesome5
                             style={styles.icon}
                             name="chevron-up" size={28} color="#E86A48"
                             onPress={() => setToggle(!toggle)}
 
                         />
+
                     ) : (
                             <FontAwesome5
                                 style={styles.icon}
@@ -53,7 +55,7 @@ const Bottom = () => {
             </View>
             {
                 toggle ? (
-                    <View style={styles.row1}>
+                    <View style={styles.row2}>
                         <MaterialCommunityIcons
                             style={styles.icon}
                             name="alarm" size={30} color="#E86A48"
@@ -92,14 +94,21 @@ const styles = StyleSheet.create({
     container: {
         flexDirection: 'column',
         backgroundColor: 'white',
-        minHeight: 50,
+        // minHeight: 50,
     },
     row1: {
         flexDirection: 'row',
         alignItems: 'center',
         minHeight: 50,
         paddingHorizontal: 25,
-    }, icon: {
+    },
+    row2: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        minHeight: 50,
+        paddingHorizontal: 25,
+    },
+    icon: {
         width: SCREEN_WIDTH / 4
     }
 });
