@@ -16,7 +16,7 @@ const Top = ({ navigation }) => {
                     size={28} color="black"
                     onPress={() => navigation.openDrawer()}
                 />
-                <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: '' }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', }}>
                     <Text
                         style={{ marginLeft: 30, fontSize: 18 }}
                         onPress={() => navigation.navigate('Location')}
@@ -32,11 +32,11 @@ const Top = ({ navigation }) => {
                     <Feather
                         style={{}}
                         name="bell" size={24} color="black"
-                        onPress={() => navigation.navigate('Cart')}
+                        onPress={() => navigation.navigate('Notification')}
 
                     />
                     <Feather
-                        style={{}}
+                        style={{ marginLeft: 15 }}
                         name="shopping-cart" size={24} color="black"
                         onPress={() => navigation.navigate('Cart')}
 

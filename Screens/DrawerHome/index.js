@@ -3,13 +3,14 @@ import { StyleSheet, SafeAreaView, ScrollView, View, Text } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-
 import Header from '../../Components/Header'
 import Banner from '../../Components/Banner'
 import Card from '../../Components/Common/Card';
 import Shovler from '../../Components/Shovler';
 import ProductCard from '../../Components/Shovler/ProductCard';
-
+import MyOrderScreen from '../MyOrder';
+import LabTestScreen from '../LabTest';
+import ConsultaionScreen from '../Consultaion';
 
 
 function HomeScreen({ navigation }) {
@@ -30,30 +31,6 @@ function HomeScreen({ navigation }) {
     );
 }
 
-function MyOrderScreen() {
-    return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>MyOrderScreen!</Text>
-        </View>
-    );
-}
-
-function LabTestScreen() {
-    return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>LabTestScreen!</Text>
-        </View>
-    );
-}
-
-function ConsultaionScreen() {
-    return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>ConsultaionScreen!</Text>
-        </View>
-    );
-}
-//
 const Tab = createBottomTabNavigator();
 
 const Index = ({ navigation }) => {
@@ -98,7 +75,6 @@ const Index = ({ navigation }) => {
         </Tab.Navigator>
     );
 }
-
 
 export default Index;
 

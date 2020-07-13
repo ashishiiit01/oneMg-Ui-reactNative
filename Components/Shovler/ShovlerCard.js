@@ -14,7 +14,7 @@ const Index = ({ navigation }) => {
         <View style={{ height: 280, flexDirection: 'row', padding: 10, marginBottom: 10 }}>
             {
                 tempArray.map(value => (
-                    <View style={{ height: 260, width: 180, backgroundColor: 'white', padding: 10, marginRight: 10 }}>
+                    <View key={value} style={{ height: 260, width: 180, backgroundColor: 'white', padding: 10, marginRight: 10 }}>
                         <View style={{ backgroundColor: 'wheat', alignSelf: 'flex-start', flexDirection: 'row', alignItems: 'center', padding: 2 }}>
                             <AntDesign name="checkcircleo" size={14} color="black" />
                             <Text style={{ fontSize: 15, marginLeft: 3, fontWeight: 'bold' }}>SAFE</Text>

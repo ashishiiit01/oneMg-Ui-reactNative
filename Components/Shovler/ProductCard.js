@@ -25,8 +25,8 @@ const Index = ({ navigation }) => {
         <ScrollView horizontal>
             <View style={{ height: 200, flexDirection: 'row', padding: 10, marginBottom: 20, }}>
                 {
-                    images.map(value => (
-                        <View style={{
+                    images.map((value, index) => (
+                        <View key={index} style={{
                             height: 180, width: 180, backgroundColor: 'white', marginRight: 10, justifyContent: 'center',
                             alignItems: 'center',
                         }}>

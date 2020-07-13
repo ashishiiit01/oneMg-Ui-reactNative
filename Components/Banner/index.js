@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, ScrollView, Image, Dimensions } from 'react-native';
+import { StyleSheet, View, ScrollView, Image, Dimensions } from 'react-native';
 
 const SCREEN_WIDTH = Dimensions.get('screen').width;
 
@@ -52,8 +52,9 @@ class Index extends React.Component {
                     ref={this.scrollRef}
                     style={styles.container}>
                     {
-                        images.map(image => (
+                        images.map((image, index) => (
                             <Image
+                                key={index}
                                 style={styles.asd}
                                 source={{
                                     uri: image,
@@ -64,8 +65,8 @@ class Index extends React.Component {
                 </ScrollView>
                 <View style={{ position: 'absolute', bottom: 10, flexDirection: 'row', justifyContent: 'center', alignItems: 'center', width: '100%' }}>
                     {
-                        images.map((key, index) => (
-                            <View style={[styles.whiteDot, { opacity: index === this.state.selectedIndex ? 0.5 : 1 }]} />
+                        images.map((value, index) => (
+                            <View key={index} style={[styles.whiteDot, { opacity: index === this.state.selectedIndex ? 0.5 : 1 }]} />
                         ))
                     }
                 </View>
