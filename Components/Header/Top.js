@@ -9,28 +9,26 @@ import { Feather, Entypo } from "@expo/vector-icons";
 
 const Top = ({ navigation }) => {
     return (
-        <View style={{ backgroundColor: 'white', height: 50, justifyContent: 'center', paddingHorizontal: 10, }}>
+        <View style={styles.container}>
 
             <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
                 <Entypo name="menu"
                     size={28} color="black"
                     onPress={() => navigation.openDrawer()}
                 />
-                <View style={{ flexDirection: 'row', alignItems: 'center', }}>
+                <View style={styles.LocationContainer}>
                     <Text
-                        style={{ marginLeft: 30, fontSize: 18 }}
+                        style={styles.LocationText}
                         onPress={() => navigation.navigate('Location')}
                     >
                         Location
                 </Text>
                     <Feather
-                        style={{}}
                         name="chevron-down" size={24} color="black" />
                 </View>
 
                 <View style={{ flexDirection: 'row' }}>
                     <Feather
-                        style={{}}
                         name="bell" size={24} color="black"
                         onPress={() => navigation.navigate('Notification')}
 
@@ -57,4 +55,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         paddingHorizontal: 10,
     },
+    LocationContainer: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    LocationText: {
+        marginLeft: 30,
+        fontSize: 18
+    }
 });

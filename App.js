@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, SafeAreaView, Dimensions, Button } from 'react-native';
+import { View, Text, SafeAreaView, Dimensions } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import {
   createDrawerNavigator,
@@ -7,6 +7,7 @@ import {
   DrawerItemList,
   DrawerItem
 } from '@react-navigation/drawer';
+import { createStackNavigator } from '@react-navigation/stack';
 
 import DrawerHome from './Screens/DrawerHome';
 import ManagePayment from './Screens/ManagePayment';
@@ -16,7 +17,6 @@ import LocationScreen from './Screens/Location';
 import ReferAndEarn from './Screens/ReferAndEarn';
 import CustomDrawerContent from './Screens/CustomDrawerContent';
 
-import { createStackNavigator } from '@react-navigation/stack';
 
 const SCREEN_WIDTH = Dimensions.get('screen').width;
 const SCREEN_HEIGHT = Dimensions.get('screen').height;
